@@ -1,0 +1,80 @@
+Arguments: 
+  /home/gabriel/.nvm/versions/node/v10.13.0/bin/node /usr/share/yarn/bin/yarn.js build
+
+PATH: 
+  /home/gabriel/.nvm/versions/node/v10.13.0/bin:/home/gabriel/bin:/home/gabriel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/gabriel/Documentos/geckodriver
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.13.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  TypeError [ERR_INVALID_ARG_VALUE]: The argument 'file' cannot be empty. Received ''
+      at normalizeSpawnArguments (child_process.js:397:11)
+      at Object.spawn (child_process.js:527:38)
+      at /usr/share/yarn/lib/cli.js:30417:24
+      at new Promise (<anonymous>)
+      at new F (/usr/share/yarn/lib/cli.js:23624:28)
+      at /usr/share/yarn/lib/cli.js:30416:12
+      at run (/usr/share/yarn/lib/cli.js:45170:7)
+      at BlockingQueue.maybePushConcurrencyQueue (/usr/share/yarn/lib/cli.js:45185:7)
+      at BlockingQueue.shift (/usr/share/yarn/lib/cli.js:45180:10)
+      at /usr/share/yarn/lib/cli.js:45124:15
+
+npm manifest: 
+  {
+    "name": "console",
+    "version": "2.0.0",
+    "main": "app/index.js",
+    "author": "Coletivo Thevelops",
+    "license": "MIT",
+    "dependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-core": "^6.26.0",
+      "babel-eslint": "^8.2.2",
+      "babel-loader": "^7.1.2",
+      "babel-plugin-css-modules-transform": "^1.6.1",
+      "babel-plugin-syntax-dynamic-import": "^6.18.0",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-polyfill": "^6.26.0",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-preset-react": "^6.24.1",
+      "babel-preset-stage-3": "^6.24.1",
+      "babel-runtime": "^6.26.0",
+      "compression": "^1.7.2",
+      "compression-webpack-plugin": "^1.1.10",
+      "css-loader": "^0.28.7",
+      "moment": "^2.21.0",
+      "poststylus": "^1.0.0",
+      "react": "^15.6.1",
+      "react-dom": "^15.6.1",
+      "react-dropzone": "^7.0.1",
+      "react-image-crop": "^3.0.11",
+      "react-redux": "^5.0.7",
+      "react-router-dom": "^4.2.2",
+      "sass-loader": "^6.0.6",
+      "style-loader": "^0.18.2",
+      "stylus": "^0.54.5",
+      "stylus-loader": "^3.0.2",
+      "uglifyjs-webpack-plugin": "^1.2.2",
+      "webpack": "^4.19.1"
+    },
+    "scripts": {
+      "build": ""
+    },
+    "devDependencies": {
+      "webpack-cli": "^2.1.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -40,6 +40,6 @@
     "build": ""
   },
   "devDependencies": {
-    "webpack-cli": "^2.1.5"
+    "webpack-cli": "3"
   }
 }

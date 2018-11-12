@@ -8,7 +8,7 @@ export default class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			show: true,
+			show: false,
 			loggedIn: false,
 			selecteds: [],
 			contacts: [],
@@ -23,11 +23,22 @@ export default class App extends Component {
 		}, 1000);
 	}
 
+	componentDidMount() {
+		document.addEventListener("keyup", (e) => {
+			console.log('dispatch event');
+			if(e.keyCode === 27) this.setState({ show: false });
+		}, false);
+	}
+
 	componentWillUpdate(nextProps, nextState) {
 		if(!this.state.loggedIn && nextState.loggedIn) {
 			this.setState({ contacts: window.WAPI.getMyContacts() })
 			clearInterval(this.authVerify) 
 		}
+	}
+
+	renderOpenButton() {
+		return <button className='tv-open-button' onClick={() => this.setState({ show: true })}><img src={this.icons.chat} /></button>
 	}
 
 	handleContactClick(id) {
@@ -67,12 +78,28 @@ export default class App extends Component {
 		this.setState({ show: false });
 	}
 
+	handleSearch(e) {
+		const regexp = new RegExp(e.target.value, 'i');
+		const contacts = window.WAPI.getMyContacts().filter(contact => {
+			return regexp.test(contact.name) || regexp.test(contact.id.user);
+		});
+
+		this.setState({ contacts });
+	}
+
 	render() {
-		if(!this.state.show || !this.state.loggedIn) return null;
+		if(!this.state.show || !this.state.loggedIn) 
+			return this.renderOpenButton();
 
 		return (
 			<div className='tv-app'>
 				<div className='modal'>
+					<div className='search-wrapper'>
+						<div className='input-group'>
+							<input placeholder='pequise por nome ou telefone' onChange={this.handleSearch.bind(this)} />
+							<img src={this.icons.searchDark} />
+						</div>
+					</div>	
 					<section className='contact-list'>
 						{ this.renderContacts() }
 					</section>

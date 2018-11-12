@@ -30,7 +30,10 @@ plugins.push(new LoaderOptionsPlugin({
 
 module.exports = {
 	entry: resolve(__dirname, 'app/index.js'),
-	output: join(__dirname, 'public/dist'),
+	output: {
+		path: join(__dirname, 'public/dist'),
+		filename: 'app.min.js'
+	},
 	mode: process.env.NODE_ENV === 'local' || process.env.NODE_ENV === 'development' ? 'development' : 'production',
 	devtool: '#source-map',
 	module: {

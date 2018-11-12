@@ -11,7 +11,9 @@ window.onload = function() {
   const icons = {
     send: chrome.extension.getURL('/public/assets/icons/send.svg'),
     clip: chrome.extension.getURL('/public/assets/icons/clip.svg'),
-    image: chrome.extension.getURL('/public/assets/icons/image.svg')
+    chat: chrome.extension.getURL('/public/assets/icons/chat.svg'),
+    image: chrome.extension.getURL('/public/assets/icons/image.svg'),
+    searchDark: chrome.extension.getURL('/public/assets/icons/search-dark.svg')
   };
 
   window.sessionStorage.setItem('tv-icons', JSON.stringify(icons))
