@@ -46,16 +46,17 @@ $black = #373540
 		> .search-wrapper
 			padding 5px 15px
 			padding-right 7px 
-			width 50%
+			width 100%
 			
 			> .input-group
 				border solid 1px $black 
 				height 100%
-				width 100% 
-				display flex 
+				width 50% 
+				display inline-flex 
 				align-items center 
 				border-radius 4px
 				padding 5px 10px 
+				vertical-align middle
 				
 				> input 
 					width calc(100% - 30px)
@@ -70,6 +71,10 @@ $black = #373540
 				> img 
 					width 25px
 		
+			> .contacts-selected-amount
+				margin-left 20px 
+				display inline-block
+				
 		> .contact-list
 			overflow: auto
 			padding 15px

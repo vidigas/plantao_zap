@@ -88,7 +88,8 @@ export default class App extends Component {
 	}
 
 	render() {
-		if(!this.state.show || !this.state.loggedIn) 
+		const { selecteds, show, loggedIn } = this.state;
+		if(!show || !loggedIn) 
 			return this.renderOpenButton();
 
 		return (
@@ -99,6 +100,7 @@ export default class App extends Component {
 							<input placeholder='pequise por nome ou telefone' onChange={this.handleSearch.bind(this)} />
 							<img src={this.icons.searchDark} />
 						</div>
+						<div className='contacts-selected-amount'><span>{selecteds.length}</span> contato{selecteds.length === 1 ? '' : 's'} selecionado</div>
 					</div>	
 					<section className='contact-list'>
 						{ this.renderContacts() }
