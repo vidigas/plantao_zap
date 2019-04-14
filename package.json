@@ -1,8 +1,8 @@
 {
-  "name": "console",
+  "name": "plantao_zap",
   "version": "2.0.0",
   "main": "app/index.js",
-  "author": "Coletivo Thevelops",
+  "author": "vidigas",
   "license": "MIT",
   "dependencies": {
     "babel-cli": "^6.26.0",
