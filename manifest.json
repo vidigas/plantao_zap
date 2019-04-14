@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Thevelops Whatsapp",
+  "name": "Plantão do zap",
   "version": "0.1",
   "permissions": [
     "webNavigation",
