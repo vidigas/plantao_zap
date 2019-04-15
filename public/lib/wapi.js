@@ -371,6 +371,7 @@ window.WAPI.getChatById = function (id, done) {
  * :rtype: object
  */
 window.WAPI.getUnreadMessagesInChat = function (id, includeMe, includeNotifications, done) {
+
     // get chat and its messages
     let chat = WAPI.getChat(id);
     let messages = chat.msgs.models;
